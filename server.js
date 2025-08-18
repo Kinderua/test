@@ -17,8 +17,8 @@ io.on('connection', (socket) => {
   
   // Add new player to the game
   players[socket.id] = {
-    x: Math.floor(Math.random() * 400),
-    y: Math.floor(Math.random() * 400),
+    x: 0,
+    y: 0,
     color: getRandomColor()
   };
   
@@ -56,4 +56,5 @@ function getRandomColor() {
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+
 });
